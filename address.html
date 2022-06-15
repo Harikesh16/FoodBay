@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block body %}
+<form action="/{{country}}/{{city}}/{{sa}}" METHOD="POST">
+        {% if data|length == 0 %}
+
+        <div id="notav" role="alert">
+            <h3>No restaurant available of your Choice!</h3>
+        </div>
+        {% else %}
+        <h2 id="heading">Available Restaurants</h2>
+        <div>
+            <td>
+                <input type="submit" id="sor" name = "rating" value="Order By Rating"> <input type="submit" id="sop" name = "rating" value="Order By Price">
+            </td>
+            <br>
+        </div>
+        <table class="table">
+            <thead>
+                <tr class="titles">
+                    <th scope="col">SNo</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Locality</th>
+                    <th scope="col">Cuisines</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Cost</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for item in data %}
+                <tr>
+                    <td scope="row">{{loop.index}}</th>
+                    <td>{{item.Name}}</td>
+                    <td>{{item.locality}}</td>
+                    <td>{{item.cuisines}}</td>
+                    <td>{{item.rating}}</td>
+                    <td>{{item.cost}}</td>
+                    <td>
+                        <a href="/country/city/{{item.id}}" type="button" class="btn btn-outline-dark btn-sm mx-1 restbt">Explore</button>
+                    </td>
+                </tr>
+
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+</form>
+{% endblock %}

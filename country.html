@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2 id="start">Wanna try some Food? Search restaurants Here</h2>
+<form action="/{{country}}" class="form-design" METHOD="POST">
+    <div>
+        <label for="country" id="cntry"> What's your Country</label>
+        <br>
+        <select class="selectpicker" data-live-search="true" name="country" id="country">
+            <option type="text" name="country" placeholder="Select Country" hidden>Select Country</option>
+            {% for item in data %}
+            <option type="text" name="country" value="{{item.name}}">{{item.name}}</option>
+            {% endfor %}
+            </datalist>
+            <div class="invalid-feedback" data-sb-feedback="country:required">A country is required.</div>
+        </select>
+        <button type = "submit" class="sbmt"> Search</button>
+    </div>
+</form>
+
+{% endblock %}

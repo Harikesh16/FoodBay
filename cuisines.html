@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+<form action="/{{country}}/{{city}}/cuisines" METHOD="POST">
+    <label for="food_type" id="filter">Which cuisines would you prefer?</label>
+    <div class="radio">
+        <span class="txt"> Pork </span> <input type="radio" label="Yes" id="pork_yes" name="pork" value="Yes"> <input type="radio" id="pork_no" label="No" name="pork" value="No"> <input type="radio" id="pork_both" label="Doesn't matter" name="pork" value="Both" checked>
+    </div>
+    <div class="radio">
+        <span class="txt"> Veg </span> <input type="radio" label="Yes" id="veg_yes" name="veg" value="Yes"> <input type="radio" id="veg_no" label="No" name="veg" value="No"> <input type="radio" id="veg_both" label="Doesn't matter" name="veg" value="Both" checked>
+    </div>
+    <div class="radio">
+        <span class="txt"> Spicy </span> <input type="radio" label="Yes" id="spicy_yes" name="spicy" value="Yes"> <input type="radio" id="spicy_no" label="No" name="spicy"  value="No"> <input type="radio" id="spicy_both" label="Doesn't matter" name="spicy" value="Both" checked>
+    </div>
+    <div class="radio">
+        <span class="txt"> Lactose </span> <input type="radio" label="Yes" id="lactose_yes" name="lactose" value="Yes"> <input type="radio" id="lactose_no" label="No" name="lactose" value="No"> <input type="radio" id="lactose_both" label="Doesn't matter" name="lactose" value="Both" checked>
+    </div>
+    <div>
+        <td>
+            <input type="submit" id="sob" name = "rating" value="Search" class="btn btn-outline-dark btn-sm mx-1">
+        </td>
+        <br>
+    </div>
+
+</form>  
+{% endblock %}

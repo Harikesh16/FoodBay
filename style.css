@@ -1,0 +1,239 @@
+body{
+    background-image: url('first.jpg');
+    background-size: cover;
+}
+#start{
+    font-size: 50px;
+    color: rgb(128, 199, 81);
+    margin-left: 40px;
+}
+#cntry{
+    margin-top: 40px;
+    font-size: 40px;
+    color: rgb(52, 162, 212);
+    font-weight: 800;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#cty{
+    margin-top: 20px;
+    font-size: 50px;
+    color: rgb(52, 162, 212);
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.form-design{
+    text-align: center;
+    font-size: 30px;
+}
+
+.selectpicker{
+    font-size: 30px;
+    margin-top: 40px;
+    border: 4px solid rgb(67, 20, 155);
+    border-radius: 3px;
+    background-color: black;
+    color: wheat;
+}
+
+.sbmt{
+    background-color: rgb(174, 212, 35);
+    border: 2px solid green;
+    border-radius: 20px;
+}
+
+#filter{
+    color: rgb(255, 221, 233);
+    margin-left: 180px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    /* border: 3px solid rgb(11, 97, 85); */
+    /* background-color: rgb(8, 116, 80); */
+}
+
+.radio {
+	/* background: #c7c1c6; */
+	padding: 4px;
+	border-radius: 3px;
+	box-shadow: inset 0 0 0 3px rgba(35, 33, 45, 0.3),
+		0 0 0 3px rgba(185, 185, 185, 0.3);
+	position: relative;
+    margin-bottom: 5px;
+}
+
+.radio input {
+	width: auto;
+	height: 100%;
+	appearance: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 60px;
+	padding: 4px 50px;
+	background: #454857;
+	color: #bdbdbdbd;
+	font-size: 20px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	transition: all 100ms linear;
+}
+
+.radio input:before {
+	content: attr(label);
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+.radio input:checked {
+	background-image: linear-gradient(180deg, #95d891, #74bbad);
+	color: #fff;
+	box-shadow: 0 1px 1px #0000002e;
+	text-shadow: 0 1px 0px #79485f7a;
+}
+.radio input:hover {
+    background-image: linear-gradient(180deg, #251a57, #645cda);
+	color: rgb(69, 38, 141);
+	box-shadow: 0 1px 1px #0000002e;
+	text-shadow: 0 1px 0px #79485f7a;
+}
+.txt{
+    font-size: 26px;
+    color: wheat;
+    margin-right: 200px;
+}
+#sob{
+    font-size: 30px;
+    background-color: rgb(111, 126, 175);
+    margin-top: 30px;
+}
+#pork_yes,#spicy_yes,#veg_yes,#lactose_yes{
+    position: absolute;
+    left: 300px;
+}
+#pork_no,#spicy_no,#veg_no,#lactose_no{
+    position: absolute;
+    left: 500px;
+}
+#pork_both,#spicy_both,#veg_both,#lactose_both{
+    position: absolute;
+    left: 700px;
+}
+
+#heading{
+    font-size: 65px;
+    color: rgb(219, 207, 183);
+    margin-left: 300px;
+}
+.titles{
+    background-color: yellowgreen;
+}
+th{
+    border: 2.5px solid black;
+    color: white;
+    font-size: 20px;
+}
+tr{
+    color: white;
+    background-color: #1d1152;
+    border: 1px solid rgb(45, 53, 24);
+}
+td{
+    border: 1.5px solid black;
+}
+.restbt{
+    color: rgb(221, 191, 136);
+    font-size: 18px;
+    background-color: rgb(160, 32, 143);
+}
+
+#notav{
+    margin-top: 50px;
+    font-size: 20px;
+    color: red;
+}
+
+#sor,#sop{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: 3px solid rgb(187, 159, 159);
+    border-radius: 5px;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#sor:hover,#sop:hover,#sor:active,#sop:active{
+    background-color: #70659e;
+    color: red;
+}
+#sop{
+    float: right;
+}
+
+#found{
+    font-size: 50px;
+    color: wheat;
+    margin: 40px 30px;
+    margin-top: 20px;
+}
+
+#rats{
+    color: rgb(24, 130, 138);
+    background-color: whitesmoke;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.rate-area {
+    float: left;
+	border-style: none;
+    margin-top: 0px;
+    margin-left: 200px;
+    padding: 0px;
+}
+
+.rate-area:not(:checked) > input {
+	position: absolute;
+	top: -9999px;
+	clip: rect(0, 0, 0, 0);
+}
+
+.rate-area:not(:checked) > label {
+	float: right;
+	width: 0.9em;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+	font-size: 380%;
+	color: lightgrey;
+}
+
+.rate-area:not(:checked) > label:before {
+	content: "★";
+}
+
+.rate-area > input:checked ~ label {
+	color: gold;
+}
+
+.rate-area:not(:checked) > label:hover,
+.rate-area:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+
+.rate-area > input:checked + label:hover,
+.rate-area > input:checked + label:hover ~ label,
+.rate-area > input:checked ~ label:hover,
+.rate-area > input:checked ~ label:hover ~ label,
+.rate-area > label:hover ~ input:checked ~ label {
+	color: gold;
+}
+
+#lastbt{
+    margin-top: 80px;
+    font-size: 24px;
+    float: right;
+    border-radius: 10px;
+}

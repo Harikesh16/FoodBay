@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<form action="/{{country}}/{{city}}" class="form-design" METHOD="POST">
+    <div>
+        <label for="city" id="cty"> Which city do you wanna explore</label><br>
+        <select class="selectpicker" data-live-search="true" name="city" id="city">
+            <option type="text" name="city" placeholder="Select City" hidden>Select City</option>
+            {% for item in data %}
+            <option type="text" name="city" value="{{item.name}}">{{item.name}}</option>
+            {% endfor %}
+            <div class="invalid-feedback" data-sb-feedback="city:required">A city is required.</div>
+        </select>
+        <button type = "submit" class="sbmt"> Submit</button>
+    </div>
+</form>
+{% endblock %}

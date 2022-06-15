@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block body %}
+<form action="/country/city/rating/{{id}}" METHOD="POST">
+    <h2 id="found">Here's the Details of Restaurant You are Looking For</h2>
+
+        {% if data|length == 0 %}
+
+        <div class="alert alert-dark" role="alert">
+            No Hotel found Please try some other location!
+        </div>
+        {% else %}
+        <table class="table">
+            <thead>
+                <tr class="titles">
+                    <th scope="col">Restaurant_name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Cuisines</th>
+                    <th scope="col">Cost</th>
+                    <th scope="col">HasTable</th>
+                    <th scope="col">Has Online Delivery</th>
+                    <th scope="col">Is Delivering Now</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Number of Votes</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for item in data %}
+                <tr>
+                    <td>{{item.rnam}}</td>
+                    <td>{{item.rad}}</td>
+                    <td>{{item.cu}}</td>
+                    <td>{{item.ac}}</td>
+                    <td>{{item.ht}}</td>
+                    <td>{{item.ho}}</td>
+                    <td>{{item.delv}}</td>
+                    <td>{{item.rating}}</td>
+                    <td>{{item.votes}}</td>
+                </tr>
+
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+        <h3 id="rats">Ordered Here! We would appreciate if you give it a rating</h3>
+        
+            <ul class="rate-area">
+                <input type="submit" id="5-star" name="ratin" value="5" /><label for="5-star" title="Amazing">5 stars</label>
+                <input type="submit" id="4-star" name="ratin" value="4" /><label for="4-star" title="Good">4 stars</label>
+                <input type="submit" id="3-star" name="ratin" value="3" /><label for="3-star" title="Average">3 stars</label>
+                <input type="submit" id="2-star" name="ratin" value="2" /><label for="2-star" title="Not Good">2 stars</label>
+                <input type="submit" id="1-star" name="ratin" value="1" /><label for="1-star" title="Bad">1 star</label>
+            </ul>
+
+            <br>
+            <a href="/" type="button" id="lastbt" class="btn btn-outline-dark btn-sm mx-1 restbt">Return to Home Page</button>
+</form>
+{% endblock %}
